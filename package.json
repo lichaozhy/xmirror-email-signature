@@ -1,10 +1,9 @@
 {
 	"name": "@xmirror/email-signature-workspace",
-	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"deps:install": "npm -v && npm install && lerna bootstrap",
-		"build:docs": "lerna run build && mv ./packages/email-signature/dist ./docs",
+		"build:docs": "rm -rf ./docs && lerna run build && mv ./packages/email-signature/dist ./docs",
 		"preversion": "npm run build:docs"
 	},
 	"workspaces": [
