@@ -2,13 +2,13 @@
 import { reactive, ref } from 'vue';
 import { Legacy } from './Solution/index.mjs';
 
-const data = reactive({
-	name: ref(''),
-	position: ref(''),
-	telephone: ref(''),
-	email: ref(''),
-	homeURL: ref('www.xmirror.cn'),
-	address: ref('北京市中关村软件园一期8号楼'),
+const data = ref({
+	name: '姓名',
+	position: '系统研发工程师',
+	telephone: '13800000000',
+	emailName: 'example',
+	homeURL: 'www.xmirror.cn',
+	address: '北京市中关村软件园一期8号楼',
 });
 
 const solutionList = [
@@ -27,7 +27,7 @@ const solutionList = [
 		:name="data.name"
 		:position="data.position"
 		:telephone="data.telephone"
-		:email="data.email"
+		:email="data.emailName"
 		:homeURL="data.homeURL"
 		:address="data.address"
 	/>
@@ -36,33 +36,37 @@ const solutionList = [
 			<b-col>
 				<b-form-group
 					id="data-name"
+					class="mb-1"
 					label="姓名"
 				><b-form-input
-					v-model="data.name"
+					v-model.trim="data.name"
 				/></b-form-group>
 			</b-col>
 			<b-col cols="8">
 				<b-form-group
 					id="data-position"
+					class="mb-1"
 					label="职位"
 				><b-form-input
-					v-model="data.position"
+					v-model.trim="data.position"
 				/></b-form-group>
 			</b-col>
 		</b-form-row>
 
 		<b-form-group
 			id="data-telephone"
+			class="mb-1"
 			label="联系方式"
 		><b-form-input
-			v-model="data.telephone"
+			v-model.trim="data.telephone"
 		/></b-form-group>
 
 		<b-form-group
 			id="data-email"
-			label="邮箱"
+			class="mb-1"
+			label="邮箱账户名"
 		><b-form-input
-			v-model="data.email"
+			v-model.trim="data.emailName"
 		/></b-form-group>
 
 		<b-button
