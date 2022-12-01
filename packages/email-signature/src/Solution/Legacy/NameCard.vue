@@ -82,7 +82,7 @@ const application = new PIXI.Application({
 	background: 0x000000,
 	backgroundAlpha: 0,
 	height: 226,
-	width: 530
+	width: 530,
 });
 
 application.stage.addChild(container);
@@ -114,6 +114,10 @@ onMounted(() => {
 });
 
 onBeforeUnmount(() => canvasDiv.value.removeChild(application.view));
+
+defineExpose({
+	generate: () => application.renderer.extract.base64(application.stage)
+});
 </script>
 
 <template>
