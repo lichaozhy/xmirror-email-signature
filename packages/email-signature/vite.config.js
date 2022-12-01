@@ -10,7 +10,7 @@ export default defineConfig({
 			template: {
 				compilerOptions: {
 					compatConfig: {
-						MODE: 3
+						MODE: 2
 					}
 				}
 			}
