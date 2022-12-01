@@ -9,13 +9,16 @@
 		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
 	},
 	"dependencies": {
+		"@vue/compat": "^3.2.45",
 		"bootstrap": "4.6.2",
 		"bootstrap-vue": "^2.23.1",
+		"pixi.js": "^7.0.4",
 		"vue": "^3.2.45"
 	},
 	"devDependencies": {
 		"@rushstack/eslint-patch": "^1.2.0",
 		"@vitejs/plugin-vue": "^3.2.0",
+		"@vue/compiler-sfc": "^3.2.45",
 		"@vue/eslint-config-prettier": "^7.0.0",
 		"eslint": "^8.28.0",
 		"eslint-plugin-vue": "^9.8.0",
