@@ -1,0 +1,13 @@
+{
+	"name": "@xmirror/email-signature-workspace",
+	"version": "0.0.0",
+	"scripts": {
+		"deps:install": "npm -v && npm install && lerna bootstrap"
+	},
+	"workspaces": [
+		"packages/**"
+	],
+	"devDependencies": {
+		"lerna": "^6.1.0"
+	}
+}
