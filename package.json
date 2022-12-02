@@ -3,8 +3,7 @@
 	"private": true,
 	"scripts": {
 		"deps:install": "npm -v && npm install && lerna bootstrap",
-		"build:docs": "rm -rf ./docs && lerna run build && mv ./packages/email-signature/dist ./docs",
-		"preversion": "npm run build:docs"
+		"build:docs": "rm -rf ./docs && lerna run build && mv ./packages/email-signature/dist ./docs"
 	},
 	"workspaces": [
 		"packages/**"
